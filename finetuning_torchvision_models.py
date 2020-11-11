@@ -6,7 +6,7 @@ import torch.optim as optim
 import numpy as np
 import torchvision
 from torchvision import datasets, models, transforms
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 import time
 import os
 import copy
@@ -300,12 +300,12 @@ shist = []
 ohist = [h.cpu().numpy() for h in hist]
 shist = [h.cpu().numpy() for h in scratch_hist]
 
-plt.title("Validation Accuracy vs. Number of Training Epochs")
-plt.xlabel("Training Epochs")
-plt.ylabel("Validation Accuracy")
-plt.plot(range(1,num_epochs+1),ohist,label="Pretrained")
-plt.plot(range(1,num_epochs+1),shist,label="Scratch")
-plt.ylim((0,1.))
-plt.xticks(np.arange(1, num_epochs+1, 1.0))
-plt.legend()
-plt.show()
+# plt.title("Validation Accuracy vs. Number of Training Epochs")
+# plt.xlabel("Training Epochs")
+# plt.ylabel("Validation Accuracy")
+# plt.plot(range(1,num_epochs+1),ohist,label="Pretrained")
+# plt.plot(range(1,num_epochs+1),shist,label="Scratch")
+# plt.ylim((0,1.))
+# plt.xticks(np.arange(1, num_epochs+1, 1.0))
+# plt.legend()
+# plt.show()
