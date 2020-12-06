@@ -49,7 +49,8 @@ num_epochs = 15
 
 # Flag for feature extracting. When False, we finetune the whole model,
 #   when True we only update the reshaped layer params
-feature_extract = True
+# feature_extract = True
+feature_extract = False
 
 
 # In[22]:
