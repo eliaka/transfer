@@ -287,7 +287,8 @@ else:
             print("\t",name)
 
 # Observe that all parameters are being optimized
-optimizer_ft = optim.SGD(params_to_update, lr=0.001, momentum=0.9)
+# optimizer_ft = optim.SGD(params_to_update, lr=0.001, momentum=0.9)
+optimizer_ft = optim.Adam(params_to_update, lr=0.0001, weight_decay=10)
 
 
 # In[ ]:
