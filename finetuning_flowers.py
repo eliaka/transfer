@@ -39,7 +39,7 @@ data_dir = "./data/flowers"
 model_name = "resnet"
 
 # Number of classes in the dataset
-num_classes = 101
+num_classes = 102
 
 # Batch size for training (change depending on how much memory you have)
 batch_size = 8
