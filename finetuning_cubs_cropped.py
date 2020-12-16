@@ -42,7 +42,7 @@ model_name = "resnet"
 num_classes = 200
 
 # Batch size for training (change depending on how much memory you have)
-batch_size = 32
+batch_size = 16
 
 # Number of epochs to train for
 num_epochs = 40
@@ -288,7 +288,7 @@ else:
             print("\t",name)
 
 # Observe that all parameters are being optimized
-optimizer_ft = optim.SGD(params_to_update, lr=0.01, momentum=0.9)
+optimizer_ft = optim.SGD(params_to_update, lr=0.001, momentum=0.9)
 # optimizer_ft = optim.Adam(params_to_update, lr=0.0001, weight_decay=10)
 
 
