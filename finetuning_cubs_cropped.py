@@ -36,7 +36,8 @@ print("Torchvision Version: ",torchvision.__version__)
 data_dir = "./data/cubs_cropped"
 
 # Models to choose from [resnet, alexnet, vgg, squeezenet, densenet, inception]
-model_name = "resnet"
+# model_name = "resnet"
+model_name = "vgg"
 
 # Number of classes in the dataset
 num_classes = 200
@@ -182,7 +183,8 @@ def initialize_model(model_name, num_classes, feature_extract, use_pretrained=Tr
     elif model_name == "vgg":
         """ VGG11_bn
         """
-        model_ft = models.vgg11_bn(pretrained=use_pretrained)
+        # model_ft = models.vgg11_bn(pretrained=use_pretrained)
+        model_ft = models.vgg16(pretrained=use_pretrained)
         set_parameter_requires_grad(model_ft, feature_extract)
         num_ftrs = model_ft.classifier[6].in_features
         model_ft.classifier[6] = nn.Linear(num_ftrs,num_classes)
